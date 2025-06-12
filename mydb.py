@@ -1,22 +1,15 @@
-# Install Mysql on your computer
-# https://dev.mysql.com/downloads/installer/
-# pip install mysql
-# pip install mysql-connector
-# pip install mysql-connector-python 
-
 import mysql.connector
+from dotenv import load_dotenv
+import os
+
+load_dotenv()  # Load variables from .env
 
 dataBase = mysql.connector.connect(
-	host = 'localhost',
-	user = 'root',
-	passwd = '19171864ch'
+    host=os.getenv("DB_HOST"),
+    user=os.getenv("DB_USER"),
+    passwd=os.getenv("DB_PASSWORD")
+)
 
-	)
-
-# prepare a cursor object
 cursorObject = dataBase.cursor()
-
-# Create a database
 cursorObject.execute("CREATE DATABASE elderco")
-
 print("All Done!")
