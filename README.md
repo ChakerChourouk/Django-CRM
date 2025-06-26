@@ -102,30 +102,6 @@ Django>=4.2,<5.0
 mysqlclient>=2.1.0
 python-decouple>=3.6
 ```
-
----
-
-## 📁 Project Structure
-
-```
-django-crm/
-├── crm_project/
-│   ├── __init__.py
-│   ├── settings.py
-│   ├── urls.py
-│   └── wsgi.py
-├── customers/
-│   ├── models.py
-│   ├── views.py
-│   ├── forms.py
-│   └── templates/
-├── static/
-├── templates/
-├── manage.py
-├── requirements.txt
-└── README.md
-```
-
 ---
 
 ## 🛠️ Usage
